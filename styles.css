@@ -1,0 +1,143 @@
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/inter-v20-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("assets/fonts/inter-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* inter-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("assets/fonts/inter-v20-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color-text-green: hsl(75, 94%, 57%);
+  --color-text-white: hsl(0, 0%, 100%);
+  --color-bg-grey-700: hsl(0, 0%, 20%);
+  --color-bg-grey-800: hsl(0, 0%, 12%);
+  --color-bg-grey-900: hsl(0, 0%, 8%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-bg-grey-900);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 32.7rem;
+  border-radius: 1.2rem;
+  background-color: var(--color-bg-grey-800);
+  text-align: center;
+  padding: 2.4rem;
+  color: var(--color-text-white);
+}
+
+.card__img {
+  width: 8.8rem;
+  height: 8.8rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.card__name {
+  margin-top: 2.4rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.card__location {
+  margin-top: 0.4rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--color-text-green);
+}
+
+.card__description {
+  margin-top: 2.4rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.card__links {
+  list-style-type: none;
+  padding: 0;
+  margin: 2.4rem 0 0 0;
+}
+
+.card__links-li {
+  max-width: 27.9rem;
+  background-color: var(--color-bg-grey-700);
+  margin-top: 1.6rem;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  transition: background-color color 0.3s ease;
+  cursor: pointer;
+}
+
+.card__links-li:hover {
+  background-color: var(--color-text-green);
+}
+
+.card__links-li:hover .card__links-a {
+  color: var(--color-bg-grey-700);
+}
+
+.card__links-a {
+  color: var(--color-text-white);
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/*--------------- Tablet ----------------- */
+@media (min-width: 768px) {
+  .card {
+    max-width: 38.4rem;
+    padding: 4rem;
+  }
+
+  .card__links-li {
+    max-width: 30.4rem;
+  }
+}
